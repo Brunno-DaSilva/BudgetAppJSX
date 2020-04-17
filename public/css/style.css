@@ -1,0 +1,295 @@
+/*=========================
+    Import and Variables
+==========================*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
+
+:root {
+  --main-dark-bg: #444;
+  --nav-bg: #080c1d;
+  --main-light-color: #ffffff;
+  --main-gold-details: #f5d626;
+}
+
+/*==================================
+    Reset Browser Default Behavior 
+===================================*/
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*==================================
+            Main Style
+===================================*/
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.nav-bar ul {
+  background-color: #080c1d; /*080c1d*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 10vh;
+}
+.nav-bar ul li {
+  list-style: none;
+}
+.nav-bar ul li a {
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  color: #c5c6c7;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+}
+.nav-bar ul li a:hover {
+  color: #66fcf1;
+}
+.container {
+  width: 100vw;
+  height: 70vh;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: #1f2833;
+  border-bottom: 8px solid #66fcf1;
+}
+
+.container-title-wrapper {
+  width: 80%;
+  height: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+img {
+  width: 30vw;
+  height: auto;
+}
+
+.container h1 {
+  font-family: "Russo One", sans-serif;
+  color: #66fcf1;
+  font-size: 6rem;
+  margin-right: -25rem;
+}
+.container p {
+  font-family: "Lato", sans-serif;
+  color: #dddedf;
+  font-size: 1.5rem;
+  text-align: left;
+  letter-spacing: 3px;
+}
+
+/*==================================
+        END - Main Area
+==================================*/
+/*
+
+*/
+/*//////////////////////////////////
+//        New Page- Form
+//////////////////////////////////*/
+
+form {
+  color: white;
+}
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 1.5vh;
+  display: inline-block;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  border-bottom: 2px solid white;
+}
+
+input[type="text"]:focus {
+  color: #081c35;
+  background: #74bdba;
+  outline-width: 0;
+}
+
+input[type="submit"] {
+  width: 100%;
+  color: #1f2833;
+  background: #45a29e;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  color: #081c35;
+  background: #74bdba;
+}
+.table__btn-container {
+  padding: 2rem;
+  margin: 1rem 0;
+}
+.table__btn-add {
+  text-decoration: none;
+  letter-spacing: 3px;
+  color: #1f2833;
+  background: #45a29e;
+  padding: 14px 20px;
+  margin: 2rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.table__btn-add:hover {
+  color: #081c35;
+  background: #74bdba;
+}
+
+/*//////////////////////////////////
+//        END - New Page- Form
+//////////////////////////////////*/
+/*
+*/
+/*//////////////////////////////////
+//        Section Area
+//////////////////////////////////*/
+
+#budge-info {
+  width: 100vw;
+  height: 50vh;
+  min-height: 100vh;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+}
+
+/*/////////////////////
+//    Table Style
+/////////////////////*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90vw;
+  color: #66fcf1;
+  background: #1f2833;
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+table i {
+  color: #45a29e;
+  margin-right: 15px;
+}
+
+td,
+th {
+  border: 1px solid #45a29e;
+  text-align: left;
+  padding: 8px;
+  font-size: 1.1rem;
+  line-height: 40px;
+}
+th {
+  font-size: 1.3rem;
+}
+
+td a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+td a:hover {
+  opacity: 0.8;
+}
+
+tr:nth-child(even) {
+  background-color: #28313c;
+  color: #c5c6c7;
+}
+
+table tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+table tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/*//////////////////////////////////
+//        END - Section Area
+//////////////////////////////////*/
+/*
+*/
+
+li span,
+#bankAccount {
+  padding: 40px;
+  color: white;
+  font-size: 1.3rem;
+}
+.lowBalance {
+  background-color: red;
+  color: white;
+}
+.positiveBalance {
+  background-color: green;
+  color: white;
+}
+
+/*//////////////////////////////////
+//        Footer
+//////////////////////////////////*/
+
+svg {
+  margin-bottom: -35px;
+  z-index: 5;
+}
+
+footer {
+  font-family: "Russo One", sans-serif;
+  width: 100vw;
+  height: 15vh;
+  color: #c5c6c7;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: auto;
+  background-color: #1f2833;
+  z-index: 6;
+}
+
+footer span {
+  color: #66fcf1;
+}
