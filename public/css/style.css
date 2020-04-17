@@ -45,14 +45,19 @@ body {
 }
 
 .nav-bar ul {
-  background-color: #080c1d; /*080c1d*/
+  background-color: var(--nav-bg); /*080c1d*/
+  position: fixed;
+  width: 100vw;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  border-bottom: 1px solid var(--secondary-gray-color);
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  width: 100vw;
-  height: 10vh;
 }
 .nav-bar ul li {
   list-style: none;
@@ -71,6 +76,7 @@ body {
   width: 100vw;
   height: 70vh;
   margin: auto;
+  margin-top: 5.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
