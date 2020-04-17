@@ -12,6 +12,7 @@
   --main-light-color: #ffffff;
   --main-dark-color: #38383a;
   --main-gold-details: #f5d626;
+  --main-btn-bg: #359c97;
 }
 
 /*==================================
@@ -75,7 +76,6 @@ body {
   align-items: center;
   align-content: center;
   background-color: var(--main-dark-bg);
-  border-bottom: 8px solid #66fcf1;
 }
 
 .container-title-wrapper {
@@ -84,21 +84,20 @@ body {
   margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-content: center;
 }
 
 img {
-  width: 30vw;
+  width: 25vw;
   height: auto;
 }
 
 .container h1 {
   font-family: "Russo One", sans-serif;
-  color: #66fcf1;
+  color: var(--main-light-color);
   font-size: 6rem;
-  margin-right: -25rem;
 }
 .container p {
   font-family: "Open Sans Condensed", sans-serif;
@@ -106,6 +105,9 @@ img {
   font-size: 1.4rem;
   text-align: left !important;
   letter-spacing: 3px;
+}
+.container p span {
+  margin: 0rem 0.8rem;
 }
 
 /*==================================
@@ -161,8 +163,9 @@ input[type="submit"]:hover {
 .table__btn-add {
   text-decoration: none;
   letter-spacing: 3px;
-  color: #1f2833;
-  background: #45a29e;
+  font-weight: bolder;
+  color: var(--main-light-color);
+  background: var(--main-btn-bg);
   padding: 14px 20px;
   margin: 2rem 2rem;
   border: none;

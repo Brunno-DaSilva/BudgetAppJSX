@@ -1,6 +1,7 @@
 const React = require("react");
 class Budget extends React.Component {
   render() {
+    const dataFromServer = this.props.Budget;
     return (
       <html lang="en">
         <head>
@@ -54,7 +55,10 @@ class Budget extends React.Component {
                 <img src="/nickBoy.png" alt="img" />
               </div>
             </div>
-            <p>Because ♢ Everyone ♢ Deserves ♢ a Second ♢ Chance</p>
+            <p>
+              Because <span>♢</span> Everyone <span>♢</span> Deserves
+              <span>♢</span> a Second <span>♢</span> Chance
+            </p>
             <svg viewBox="0 3 100 14">
               <path
                 fill="#ffffff"
@@ -86,13 +90,15 @@ class Budget extends React.Component {
               </tr>
 
               <tr>
-                <tr>
-                  <td></td>
-                  <td>
-                    <a href="budgets/"></a>
-                  </td>
-                  <td></td>
-                </tr>
+                {dataFromServer.map((data, index) => (
+                  <tr>
+                    <td>{data.date}</td>
+                    <td>
+                      <a href={`budgets/${index}`}> {data.name}</a>
+                    </td>
+                    <td>{data.amount}</td>
+                  </tr>
+                ))}
               </tr>
             </table>
           </section>
@@ -102,7 +108,7 @@ class Budget extends React.Component {
 
           <footer>
             <p>
-              &copy 2020 Bruno DaSilva <span> Budget App</span>
+              2020 Bruno DaSilva <span> Budget App</span>
             </p>
           </footer>
         </body>
