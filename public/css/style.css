@@ -55,7 +55,7 @@ body {
   border-bottom: 1px solid var(--secondary-gray-color);
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-content: center;
   align-items: center;
 }
@@ -71,6 +71,18 @@ body {
 }
 .nav-bar ul li a:hover {
   color: #66fcf1;
+}
+.new-container {
+  width: 100vw;
+  min-height: 80vh;
+  margin: auto;
+  margin-top: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  background-color: var(--main-dark-bg);
 }
 .container {
   width: 100vw;
@@ -101,19 +113,22 @@ img {
   height: auto;
 }
 
-.container h1 {
+.container h1,
+.new-container h1 {
   font-family: "Russo One", sans-serif;
   color: var(--main-light-color);
   font-size: 6rem;
 }
-.container p {
+.container p,
+.new-container p {
   font-family: "Open Sans Condensed", sans-serif;
   color: #dddedf;
   font-size: 1.4rem;
   text-align: left !important;
   letter-spacing: 3px;
 }
-.container p span {
+.container p span,
+.new-container p span {
   margin: 0rem 0.8rem;
 }
 
@@ -127,41 +142,67 @@ img {
 //        New Page- Form
 //////////////////////////////////*/
 
+.new__btn-back {
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  width: 30%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  color: var(--secondary-gray-color);
+  background: transparent;
+  border: 1px solid var(--secondary-gray-color);
+  border-radius: 4px;
+}
+
+.new__btn-back:hover {
+  color: var(--main-gold-details);
+  cursor: pointer;
+}
+
 form {
-  color: white;
+  width: 30vw;
+  color: var(--main-light-color);
 }
 input[type="text"],
 select {
   width: 100%;
   padding: 12px 20px;
   margin-bottom: 1.5vh;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--main-light-color);
   display: inline-block;
   border: none;
   box-sizing: border-box;
   background-color: transparent;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid var(--main-light-color);
 }
 
 input[type="text"]:focus {
-  color: #081c35;
-  background: #74bdba;
+  color: var(--main-light-color);
+  background: transparent;
   outline-width: 0;
 }
 
 input[type="submit"] {
   width: 100%;
-  color: #1f2833;
-  background: #45a29e;
   padding: 14px 20px;
   margin: 8px 0;
-  border: none;
+  color: var(--secondary-gray-color);
+  background: transparent;
+  border: 1px solid var(--secondary-gray-color);
   border-radius: 4px;
-  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 input[type="submit"]:hover {
-  color: #081c35;
-  background: #74bdba;
+  color: var(--main-gold-details);
+  cursor: pointer;
 }
 .table__btn-container {
   padding: 2rem;

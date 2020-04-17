@@ -1,7 +1,10 @@
 const React = require("react");
 class Budget extends React.Component {
   render() {
-    const dataFromServer = this.props.Budget;
+    const { Budget, sum } = this.props;
+
+    console.log(this.props);
+
     return (
       <html lang="en">
         <head>
@@ -31,20 +34,20 @@ class Budget extends React.Component {
                 <a href="#">Home </a>
               </li>
               <li>
-                <a href="#budgetInfo">Budget</a>
+                <a href="http://localhost:3000/budgets/new">New Item</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="http://www.bruno-dasilva.com/">About</a>
               </li>
               <li id="bankAccount">
-                Bank Account:
-                {this.props.sum < 0 ? (
+                Budget Balance:
+                {sum < 0 ? (
                   <span id="accountBalance" className="lowBalance">
-                    ${this.props.sum}
+                    ${sum}
                   </span>
                 ) : (
                   <span id="accountBalance" className="positiveBalance">
-                    ${this.props.sum}
+                    ${sum}
                   </span>
                 )}
               </li>
@@ -97,15 +100,17 @@ class Budget extends React.Component {
               </tr>
 
               <tr>
-                {dataFromServer.map((data, index) => (
-                  <tr>
-                    <td>{data.date}</td>
-                    <td>
-                      <a href={`budgets/${index}`}>{data.name}</a>
-                    </td>
-                    <td>{data.amount}</td>
-                  </tr>
-                ))}
+                {Budget.map((data, index) => {
+                  return (
+                    <tr>
+                      <td>{data.date}</td>
+                      <td>
+                        <a href={`budgets/${index}`}>{data.name}</a>
+                      </td>
+                      <td>{data.amount}</td>
+                    </tr>
+                  );
+                })}
               </tr>
             </table>
           </section>

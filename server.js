@@ -16,6 +16,10 @@ const Budget = require("./models/budget");
 //=============================
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").createEngine());
+
+//tells express to parse data from POST request:
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(express.static("public"));
 
 //=============================
@@ -30,11 +34,38 @@ app.get("/budgets", (req, res) => {
   for (let i = 0; i < Budget.length; i++) {
     sum += Budget[i].amount;
   }
-  // bank Account balance
-  res.render("Index.jsx", {
+  //   bank Account balance
+  res.render("Index", { sum: sum, Budget });
+});
+
+// New
+app.get("/budgets/new", (req, res) => {
+  let sum = 0;
+  for (let i = 0; i < Budget.length; i++) {
+    sum += Budget[i].amount;
+  }
+  res.render("New", {
     Budget: Budget,
     sum: sum,
   });
+});
+
+//Show
+app.get("/budgets/:id", (req, res) => {
+  res.render("Show.jsx", { Budget: Budget[req.params.id] });
+});
+
+// New >> Create Route
+app.post("/budgets", (req, res) => {
+  //   console.log(req.body);
+  if (req.body.amount != Number) {
+    req.body.amount = parseInt(req.body.amount);
+  } else {
+    req.body.amount = parseInt(req.body.amount);
+  }
+
+  Budget.push(req.body);
+  res.redirect("/budgets");
 });
 
 //=============================
