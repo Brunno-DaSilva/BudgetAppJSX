@@ -24,7 +24,7 @@ class Budget extends React.Component {
           <title>Budget-Index Page</title>
         </head>
         <body>
-          <div class="nav-bar">
+          <div className="nav-bar">
             <ul>
               <li>
                 <a href="#">Home </a>
@@ -37,13 +37,13 @@ class Budget extends React.Component {
               </li>
               <li id="bankAccount">
                 Bank Account:
-                <span id="accountBalance" class="lowBalance"></span>
-                <span id="accountBalance" class="positiveBalance"></span>
+                <span id="accountBalance" className="lowBalance"></span>
+                <span id="accountBalance" className="positiveBalance"></span>
               </li>
             </ul>
           </div>
-          <div class="container">
-            <div class="container-title-wrapper">
+          <div className="container">
+            <div className="container-title-wrapper">
               <div>
                 <h1>
                   Budget
@@ -54,31 +54,34 @@ class Budget extends React.Component {
                 <img src="/nickBoy.png" alt="img" />
               </div>
             </div>
-            <p>Because everyone deserves a second chance</p>
+            <p>Because ♢ Everyone ♢ Deserves ♢ a Second ♢ Chance</p>
             <svg viewBox="0 3 100 14">
               <path
-                fill="#66fcf1"
+                fill="#ffffff"
                 d="M0 30 V12 Q30 17 55 12 T100 11 V30z"
               ></path>
             </svg>
           </div>
 
-          <section id="budge-info" class="table-container">
-            <div class="table__btn-container">
-              <a class="table__btn-add" href="/budgets/new">
+          <section id="budge-info" className="table-container">
+            <div>
+              <h3>Budget Table</h3>
+            </div>
+            <div className="table__btn-container">
+              <a className="table__btn-add" href="/budgets/new">
                 Add Item
               </a>
             </div>
             <table>
               <tr>
                 <th>
-                  <i class="fas fa-calendar-check"></i> D a t e
+                  <i className="fas fa-calendar-check"></i> D a t e
                 </th>
                 <th>
-                  <i class="fas fa-clipboard-list"></i> N a m e
+                  <i className="fas fa-clipboard-list"></i> N a m e
                 </th>
                 <th>
-                  <i class="fas fa-file-invoice-dollar"></i> A m o u n t
+                  <i className="fas fa-file-invoice-dollar"></i> A m o u n t
                 </th>
               </tr>
 

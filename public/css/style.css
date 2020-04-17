@@ -3,13 +3,14 @@
 ==========================*/
 
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
 
 :root {
-  --main-dark-bg: #444;
+  --main-dark-bg: #1f2833;
   --nav-bg: #080c1d;
   --main-light-color: #ffffff;
+  --main-dark-color: #38383a;
   --main-gold-details: #f5d626;
 }
 
@@ -33,7 +34,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,10 +56,10 @@ body {
   list-style: none;
 }
 .nav-bar ul li a {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   text-decoration: none;
   color: #c5c6c7;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   letter-spacing: 2px;
 }
 .nav-bar ul li a:hover {
@@ -73,7 +74,7 @@ body {
   justify-content: space-around;
   align-items: center;
   align-content: center;
-  background-color: #1f2833;
+  background-color: var(--main-dark-bg);
   border-bottom: 8px solid #66fcf1;
 }
 
@@ -100,10 +101,10 @@ img {
   margin-right: -25rem;
 }
 .container p {
-  font-family: "Lato", sans-serif;
+  font-family: "Open Sans Condensed", sans-serif;
   color: #dddedf;
-  font-size: 1.5rem;
-  text-align: left;
+  font-size: 1.4rem;
+  text-align: left !important;
   letter-spacing: 3px;
 }
 
@@ -172,6 +173,12 @@ input[type="submit"]:hover {
 .table__btn-add:hover {
   color: #081c35;
   background: #74bdba;
+}
+
+.table-container h3 {
+  font-size: 4rem;
+  color: var(--main-dark-color);
+  letter-spacing: 3px;
 }
 
 /*//////////////////////////////////
