@@ -38,8 +38,15 @@ class Budget extends React.Component {
               </li>
               <li id="bankAccount">
                 Bank Account:
-                <span id="accountBalance" className="lowBalance"></span>
-                <span id="accountBalance" className="positiveBalance"></span>
+                {this.props.sum < 0 ? (
+                  <span id="accountBalance" className="lowBalance">
+                    ${this.props.sum}
+                  </span>
+                ) : (
+                  <span id="accountBalance" className="positiveBalance">
+                    ${this.props.sum}
+                  </span>
+                )}
               </li>
             </ul>
           </div>
@@ -78,14 +85,14 @@ class Budget extends React.Component {
             </div>
             <table>
               <tr>
-                <th>
-                  <i className="fas fa-calendar-check"></i> D a t e
+                <th className="table-title">
+                  <i className="fas fa-calendar-check"></i> date
                 </th>
-                <th>
-                  <i className="fas fa-clipboard-list"></i> N a m e
+                <th className="table-title">
+                  <i className="fas fa-clipboard-list"></i> name
                 </th>
-                <th>
-                  <i className="fas fa-file-invoice-dollar"></i> A m o u n t
+                <th className="table-title">
+                  <i className="fas fa-file-invoice-dollar"></i> amount
                 </th>
               </tr>
 
@@ -94,7 +101,7 @@ class Budget extends React.Component {
                   <tr>
                     <td>{data.date}</td>
                     <td>
-                      <a href={`budgets/${index}`}> {data.name}</a>
+                      <a href={`budgets/${index}`}>{data.name}</a>
                     </td>
                     <td>{data.amount}</td>
                   </tr>

@@ -10,6 +10,7 @@
   --main-dark-bg: #1f2833;
   --nav-bg: #080c1d;
   --main-light-color: #ffffff;
+  --secondary-gray-color: #c5c6c7;
   --main-dark-color: #38383a;
   --main-gold-details: #f5d626;
   --main-btn-bg: #359c97;
@@ -59,7 +60,7 @@ body {
 .nav-bar ul li a {
   font-family: "Open Sans Condensed", sans-serif;
   text-decoration: none;
-  color: #c5c6c7;
+  color: var(--secondary-gray-color);
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
@@ -219,6 +220,7 @@ table {
   overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
 table i {
   color: #45a29e;
   margin-right: 15px;
@@ -243,11 +245,16 @@ td a {
 }
 td a:hover {
   opacity: 0.8;
+  color: var(--main-gold-details);
 }
 
 tr:nth-child(even) {
   background-color: #28313c;
-  color: #c5c6c7;
+  color: var(--secondary-gray-color);
+}
+tr:nth-child(odd) {
+  background-color: #1f2833;
+  color: #c1f3f0;
 }
 
 table tr:last-child td:first-child {
@@ -256,6 +263,12 @@ table tr:last-child td:first-child {
 
 table tr:last-child td:last-child {
   border-bottom-right-radius: 10px;
+}
+
+.table-title {
+  color: #66fcf1;
+  text-transform: capitalize;
+  letter-spacing: 4px;
 }
 
 /*//////////////////////////////////
@@ -267,16 +280,22 @@ table tr:last-child td:last-child {
 li span,
 #bankAccount {
   padding: 40px;
-  color: white;
+  color: var(--main-light-color);
   font-size: 1.3rem;
 }
 .lowBalance {
-  background-color: red;
-  color: white;
+  background-color: #f04a47;
+  color: var(--main-light-color);
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 50%;
 }
 .positiveBalance {
-  background-color: green;
-  color: white;
+  background-color: var(--main-btn-bg);
+  color: var(--main-light-color);
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 50%;
 }
 
 /*//////////////////////////////////
@@ -292,11 +311,11 @@ footer {
   font-family: "Russo One", sans-serif;
   width: 100vw;
   height: 15vh;
-  color: #c5c6c7;
+  color: var(--secondary-gray-color);
   font-size: 1.5rem;
   text-align: center;
   margin-top: auto;
-  background-color: #1f2833;
+  background-color: var(--main-dark-bg);
   z-index: 6;
 }
 
