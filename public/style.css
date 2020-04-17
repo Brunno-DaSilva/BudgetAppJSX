@@ -1,0 +1,16 @@
+:root {
+  --main-dark-bg: #444;
+  --main-light-color: #ffffff;
+  --main-gold-details: #f5d626;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-dark-bg);
+  color: var(--main-light-color);
+  border: var(--main-gold-details);
+}
