@@ -1,6 +1,5 @@
 # Budget App JSX CRUD App
 
-
 #### Tools
 
 - JavaScript
@@ -16,13 +15,12 @@
 
 - When a user clicks on the name of the budget item, they will be taken to that budgets' `show` page and will see the item's details.
 
-- The user can add a new item
+- The user can add a new item, can edit and delete an existent item
 
 - Finally, the user will see a sum of the account balance that will be displayed at the navigation bar.
 
 ---
 
 I have made this app with EJS last year so I converted it to JSX
-
 
 ##### Demo:
