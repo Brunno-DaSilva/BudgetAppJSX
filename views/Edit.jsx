@@ -1,8 +1,8 @@
 const React = require("react");
-class Show extends React.Component {
+
+class Edit extends React.Component {
   render() {
     const Budget = this.props.Budget;
-
     return (
       <html lang="en">
         <head>
@@ -23,7 +23,7 @@ class Show extends React.Component {
             integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
             crossorigin="anonymous"
           />
-          <title>Budget - Show Page</title>
+          <title>Budget - Edit Page</title>
         </head>
         <body>
           <div className="nav-bar">
@@ -47,39 +47,59 @@ class Show extends React.Component {
           </div>
 
           <div className="new-container">
-            <h1>
-              Details: <span>{Budget.name}</span>
-            </h1>
-
-            <table>
-              <tr>
-                <th className="table-title">
-                  <i class="fas fa-calendar-check fa-2x"></i> D a t e
-                </th>
-                <th className="table-title">
-                  <i class="fas fa-clipboard-list fa-2x"></i> N a m e
-                </th>
-                <th className="table-title">
-                  <i class="fas fa-user-tie fa-2x"></i> F r o m
-                </th>
-                <th className="table-title">
-                  <i class="fas fa-tags fa-2x"></i> T a g
-                </th>
-                <th className="table-title">
-                  <i class="fas fa-file-invoice-dollar fa-2x"></i> A m o u n t
-                </th>
-              </tr>
-
-              <tr>
-                <tr>
-                  <td>{Budget.name}</td>
-                  <td>{Budget.name} </td>
-                  <td>{Budget.from} </td>
-                  <td>{Budget.tags} </td>
-                  <td>{Budget.amount}</td>
-                </tr>
-              </tr>
-            </table>
+            <div>
+              <h1>
+                Editing: <span>{Budget.name} </span>
+              </h1>
+              <form
+                class=""
+                action={`/budgets/${this.props.index}?_method=PUT`}
+                method="POST"
+              >
+                <p>Date: </p>
+                <input
+                  type="text"
+                  value={Budget.date}
+                  name="date"
+                  placeholder="May 22"
+                />
+                <br />
+                <p>Name:</p>
+                <input
+                  type="text"
+                  name="name"
+                  value={Budget.name}
+                  placeholder="Built my own Light saber"
+                />
+                <br />
+                <p>Amount:</p>
+                {/* <input type="text" value="" name="amount" placeholder="350" /> */}
+                <input
+                  type="number"
+                  name="amount"
+                  value={Budget.amount}
+                  placeholder="amount"
+                />
+                <br />
+                <p>From:</p>
+                <input
+                  type="text"
+                  value={Budget.from}
+                  name="from"
+                  placeholder="Disney Trip"
+                />
+                <br />
+                <p> Tags:</p>
+                <input
+                  type="text"
+                  value={Budget.tags}
+                  name="tags"
+                  placeholder="game, fun, night out"
+                />
+                <br />
+                <input type="submit" name="" value="Update Item" />
+              </form>
+            </div>
 
             <a className="new__btn-back" href="http://localhost:3000/budgets">
               Go Back
@@ -100,4 +120,5 @@ class Show extends React.Component {
     );
   }
 }
-module.exports = Show;
+
+module.exports = Edit;

@@ -29,6 +29,14 @@ app.use(methodOverride("_method"));
 //          Routers
 //=============================
 
+/****************************************************************************************
+ * Presentational Routes
+ * Index: shows a list of all of our resources and has linked to New, Edit, & Deelete
+ * Show: shows one individual resource from our list
+ * New: shows a form to creata new resource lined to create
+ * EDIT: Shows a form to update a resource linked to our Update route
+ ****************************************************************************************/
+
 //====================
 //       Index
 //====================
@@ -41,6 +49,14 @@ app.get("/budgets", (req, res) => {
   }
   //   bank Account balance
   res.render("Index", { sum: sum, Budget });
+});
+
+//====================
+//       Show
+//====================
+
+app.get("/budgets/:id", (req, res) => {
+  res.render("Show.jsx", { Budget: Budget[req.params.id] });
 });
 
 //====================
@@ -57,14 +73,13 @@ app.get("/budgets/new", (req, res) => {
     sum: sum,
   });
 });
+/*************************************************************************
+ * Functional Routes
+ * Create: creates a new resource using app.post() | Post
+ * Delete: deletes a resource use app.delete() | Destroy
+ * Update: updates a resource | PUT
+ *************************************************************************/
 
-//====================
-//       Show
-//====================
-
-app.get("/budgets/:id", (req, res) => {
-  res.render("Show.jsx", { Budget: Budget[req.params.id] });
-});
 //====================
 //    Create Route
 //====================
@@ -90,6 +105,23 @@ app.delete("/budgets/:id", (req, res) => {
   res.redirect("/budgets"); //redirect back to index route
 });
 
+//====================
+//      Edit
+//====================
+app.get("/budgets/:id/edit", (req, res) => {
+  res.render("Edit", {
+    Budget: Budget[req.params.id],
+    index: req.params.id,
+  });
+});
+
+//====================
+//      Update
+//====================
+app.put("/budgets/:id", (req, res) => {
+  Budget[req.params.id] = req.body; //in our budget array, find the index that is specified in the url (:id).  Set that element to the value of req.body (the input data)
+  res.redirect("/budgets"); //redirect to the index page
+});
 //=============================
 // Listening on Port 3000
 //=============================

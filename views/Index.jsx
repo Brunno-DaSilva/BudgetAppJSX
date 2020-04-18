@@ -105,6 +105,9 @@ class Budget extends React.Component {
                   <i className="fas fa-file-invoice-dollar"></i> amount
                 </th>
                 <th className="table-title">
+                  <i className="fas fa-pencil-alt"></i> edit
+                </th>
+                <th className="table-title">
                   <i className="fas fa-trash"></i> delete
                 </th>
               </tr>
@@ -118,7 +121,14 @@ class Budget extends React.Component {
                         <a href={`budgets/${index}`}>{data.name}</a>
                       </td>
                       <td>{data.amount}</td>
-
+                      <td>
+                        <a
+                          className="table__btn-edit"
+                          href={`/budgets/${index}/edit`}
+                        >
+                          <i class="fas fa-pencil-alt"></i>
+                        </a>
+                      </td>
                       <td>
                         <form
                           className="table__form-delete"
@@ -126,7 +136,7 @@ class Budget extends React.Component {
                           method="POST"
                         >
                           <button className="table__btn-delete" type="submit">
-                            <i className="fas fa-trash"></i>{" "}
+                            <i className="fas fa-trash"></i>
                           </button>
                         </form>
                       </td>
