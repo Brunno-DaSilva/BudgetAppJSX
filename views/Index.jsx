@@ -104,6 +104,9 @@ class Budget extends React.Component {
                 <th className="table-title">
                   <i className="fas fa-file-invoice-dollar"></i> amount
                 </th>
+                <th className="table-title">
+                  <i className="fas fa-trash"></i> delete
+                </th>
               </tr>
 
               <tr>
@@ -115,6 +118,18 @@ class Budget extends React.Component {
                         <a href={`budgets/${index}`}>{data.name}</a>
                       </td>
                       <td>{data.amount}</td>
+
+                      <td>
+                        <form
+                          className="table__form-delete"
+                          action={`/budgets/${index}?_method=DELETE`}
+                          method="POST"
+                        >
+                          <button className="table__btn-delete" type="submit">
+                            <i className="fas fa-trash"></i>{" "}
+                          </button>
+                        </form>
+                      </td>
                     </tr>
                   );
                 })}

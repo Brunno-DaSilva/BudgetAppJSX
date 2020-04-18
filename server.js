@@ -5,6 +5,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
+const methodOverride = require("method-override");
 
 //=============================
 //          Data
@@ -21,6 +22,8 @@ app.engine("jsx", require("express-react-views").createEngine());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+//method override
+app.use(methodOverride("_method"));
 
 //=============================
 //          Routers
@@ -83,7 +86,7 @@ app.post("/budgets", (req, res) => {
 //====================
 
 app.delete("/budgets/:id", (req, res) => {
-  fruits.splice(req.params.id, 1); //remove the item from the array
+  Budget.splice(req.params.id, 1); //remove the item from the array
   res.redirect("/budgets"); //redirect back to index route
 });
 
