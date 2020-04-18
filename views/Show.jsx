@@ -29,18 +29,18 @@ class Show extends React.Component {
           <div className="nav-bar">
             <ul>
               <li>
-                <a href="#">
-                  <i class="fas fa-home"></i>
+                <a href="http://localhost:3000/budgets">
+                  <i className="fas fa-home fa-2x"></i>
                 </a>
               </li>
               <li>
                 <a href="http://localhost:3000/budgets/new">
-                  <i class="fas fa-plus"></i>
+                  <i className="fas fa-plus fa-2x"></i>
                 </a>
               </li>
               <li>
                 <a href="http://www.bruno-dasilva.com/">
-                  <i class="fas fa-cookie-bite"></i>
+                  <i className="fas fa-cookie-bite fa-2x"></i>
                 </a>
               </li>
             </ul>
