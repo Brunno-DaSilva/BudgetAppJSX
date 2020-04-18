@@ -19,6 +19,7 @@ class Budget extends React.Component {
           <link rel="stylesheet" href="/css/style.css" />
 
           {/* FontAwesome */}
+
           <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
@@ -31,7 +32,9 @@ class Budget extends React.Component {
           <div className="nav-bar">
             <ul>
               <li>
-                <a href="#">Home </a>
+                <a href="#">
+                  <i class="fas fa-home"></i>
+                </a>
               </li>
               <li>
                 <a href="http://localhost:3000/budgets/new">New Item</a>
