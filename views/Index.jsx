@@ -37,10 +37,14 @@ class Budget extends React.Component {
                 </a>
               </li>
               <li>
-                <a href="http://localhost:3000/budgets/new">New Item</a>
+                <a href="http://localhost:3000/budgets/new">
+                  <i class="fas fa-plus"></i>
+                </a>
               </li>
               <li>
-                <a href="http://www.bruno-dasilva.com/">About</a>
+                <a href="http://www.bruno-dasilva.com/">
+                  <i class="fas fa-cookie-bite"></i>
+                </a>
               </li>
               <li id="bankAccount">
                 Budget Balance:

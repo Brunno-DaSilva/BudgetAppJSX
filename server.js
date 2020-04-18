@@ -26,7 +26,9 @@ app.use(express.static("public"));
 //          Routers
 //=============================
 
-//Index
+//====================
+//       Index
+//====================
 app.get("/budgets", (req, res) => {
   //   res.send("<h1>Ciao Bella, Me piace parlare italiano</h1>");
 
@@ -38,7 +40,10 @@ app.get("/budgets", (req, res) => {
   res.render("Index", { sum: sum, Budget });
 });
 
-// New
+//====================
+//       New
+//====================
+
 app.get("/budgets/new", (req, res) => {
   let sum = 0;
   for (let i = 0; i < Budget.length; i++) {
@@ -50,12 +55,17 @@ app.get("/budgets/new", (req, res) => {
   });
 });
 
-//Show
+//====================
+//       Show
+//====================
+
 app.get("/budgets/:id", (req, res) => {
   res.render("Show.jsx", { Budget: Budget[req.params.id] });
 });
+//====================
+//    Create Route
+//====================
 
-// New >> Create Route
 app.post("/budgets", (req, res) => {
   //   console.log(req.body);
   if (req.body.amount != Number) {
@@ -66,6 +76,15 @@ app.post("/budgets", (req, res) => {
 
   Budget.push(req.body);
   res.redirect("/budgets");
+});
+
+//====================
+//      Delete
+//====================
+
+app.delete("/budgets/:id", (req, res) => {
+  fruits.splice(req.params.id, 1); //remove the item from the array
+  res.redirect("/budgets"); //redirect back to index route
 });
 
 //=============================
