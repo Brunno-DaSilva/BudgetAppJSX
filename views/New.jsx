@@ -2,6 +2,8 @@ const React = require("react");
 
 class NewPage extends React.Component {
   render() {
+    const Budget = this.props.Budget;
+
     return (
       <html lang="en">
         <head>

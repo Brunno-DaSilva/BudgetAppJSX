@@ -32,8 +32,8 @@ app.use(methodOverride("_method"));
 /****************************************************************************************
  * Presentational Routes
  * Index: shows a list of all of our resources and has linked to New, Edit, & Deelete
- * Show: shows one individual resource from our list
  * New: shows a form to creata new resource lined to create
+ * Show: shows one individual resource from our list
  * EDIT: Shows a form to update a resource linked to our Update route
  ****************************************************************************************/
 
@@ -52,26 +52,21 @@ app.get("/budgets", (req, res) => {
 });
 
 //====================
+//       New
+//====================
+
+app.get("/budgets/new", (req, res) => {
+  res.render("New", {
+    Budget: Budget,
+  });
+});
+
+//====================
 //       Show
 //====================
 
 app.get("/budgets/:id", (req, res) => {
   res.render("Show.jsx", { Budget: Budget[req.params.id] });
-});
-
-//====================
-//       New
-//====================
-
-app.get("/budgets/new", (req, res) => {
-  let sum = 0;
-  for (let i = 0; i < Budget.length; i++) {
-    sum += Budget[i].amount;
-  }
-  res.render("New", {
-    Budget: Budget,
-    sum: sum,
-  });
 });
 /*************************************************************************
  * Functional Routes
@@ -122,6 +117,7 @@ app.put("/budgets/:id", (req, res) => {
   Budget[req.params.id] = req.body; //in our budget array, find the index that is specified in the url (:id).  Set that element to the value of req.body (the input data)
   res.redirect("/budgets"); //redirect to the index page
 });
+
 //=============================
 // Listening on Port 3000
 //=============================

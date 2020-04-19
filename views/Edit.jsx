@@ -49,7 +49,7 @@ class Edit extends React.Component {
           <div className="new-container">
             <div>
               <h1>
-                Editing: <span>{Budget.name} </span>
+                Editing: <span>{this.props.Budget.name}</span>
               </h1>
               <form
                 class=""

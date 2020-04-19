@@ -1,7 +1,7 @@
 const React = require("react");
 class Show extends React.Component {
   render() {
-    const Budget = this.props.Budget;
+    const { Budget } = this.props;
 
     return (
       <html lang="en">
