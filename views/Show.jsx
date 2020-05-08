@@ -29,12 +29,12 @@ class Show extends React.Component {
           <div className="nav-bar">
             <ul>
               <li>
-                <a href="http://localhost:3000/budgets">
+                <a href="/budgets">
                   <i className="fas fa-home "></i>
                 </a>
               </li>
               <li>
-                <a href="http://localhost:3000/budgets/new">
+                <a href="/budgets/new">
                   <i className="fas fa-plus "></i>
                 </a>
               </li>
