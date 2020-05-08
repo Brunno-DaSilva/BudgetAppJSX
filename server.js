@@ -4,7 +4,7 @@
 
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const methodOverride = require("method-override");
 
 //=============================
@@ -121,6 +121,6 @@ app.put("/budgets/:id", (req, res) => {
 //=============================
 // Listening on Port 3000
 //=============================
-app.listen(port, (req, res) => {
-  console.log(`Ascoltando al porto... ${port}`);
+app.listen(PORT, (req, res) => {
+  console.log(`Ascoltando al porto... ${PORT}`);
 });
