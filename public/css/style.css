@@ -415,3 +415,12 @@ footer {
 footer span {
   color: #66fcf1;
 }
+
+@media screen and (max-width: 600px) {
+  #hide-sm {
+    display: none;
+  }
+  #table-sm {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -33,17 +33,17 @@ class Budget extends React.Component {
             <ul>
               <li>
                 <a href="http://localhost:3000/budgets">
-                  <i className="fas fa-home fa-2x"></i>
+                  <i className="fas fa-home"></i>
                 </a>
               </li>
               <li>
                 <a href="http://localhost:3000/budgets/new">
-                  <i className="fas fa-plus fa-2x"></i>
+                  <i className="fas fa-plus"></i>
                 </a>
               </li>
               <li>
                 <a href="http://www.bruno-dasilva.com/">
-                  <i className="fas fa-cookie-bite fa-2x"></i>
+                  <i className="fas fa-cookie-bite"></i>
                 </a>
               </li>
               <li id="bankAccount">
@@ -76,7 +76,8 @@ class Budget extends React.Component {
               Because <span>♢</span> Everyone <span>♢</span> Deserves
               <span>♢</span> a Second <span>♢</span> Chance
             </p>
-            <svg viewBox="0 3 100 14">
+
+            <svg id="hide-sm" viewBox="0 8 100 10">
               <path
                 fill="#ffffff"
                 d="M0 30 V12 Q30 17 55 12 T100 11 V30z"
@@ -93,7 +94,8 @@ class Budget extends React.Component {
                 Add Item
               </a>
             </div>
-            <table>
+
+            <table id="table-sm">
               <tr>
                 <th className="table-title">
                   <i className="fas fa-calendar-check"></i> date
