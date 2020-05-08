@@ -30,25 +30,27 @@ class NewPage extends React.Component {
           <div className="nav-bar">
             <ul>
               <li>
-                <a href="http://localhost:3000/budgets">
-                  <i className="fas fa-home fa-2x"></i>
+                <a href="/budgets">
+                  <i className="fas fa-home "></i>
                 </a>
               </li>
               <li>
-                <a href="http://localhost:3000/budgets/new">
-                  <i className="fas fa-plus fa-2x"></i>
+                <a href="/budgets/new">
+                  <i className="fas fa-plus "></i>
                 </a>
               </li>
               <li>
                 <a href="http://www.bruno-dasilva.com/">
-                  <i className="fas fa-cookie-bite fa-2x"></i>
+                  <i className="fas fa-cookie-bite "></i>
                 </a>
               </li>
             </ul>
           </div>
 
           <div className="new-container">
-            <p>New Item Budget Cage</p>
+            <h1>
+              New Item <span>Budget Cage</span>
+            </h1>
 
             <div>
               <form class="" action="/budgets" method="POST">

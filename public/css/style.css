@@ -117,12 +117,12 @@ img {
 .new-container h1 {
   font-family: "Russo One", sans-serif;
   color: var(--main-light-color);
-  font-size: 6rem;
+  font-size: 4rem;
 }
 
 .new-container h1 span {
   font-family: "Russo One", sans-serif;
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--main-gold-details);
 }
 .container p,

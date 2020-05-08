@@ -30,17 +30,17 @@ class Show extends React.Component {
             <ul>
               <li>
                 <a href="http://localhost:3000/budgets">
-                  <i className="fas fa-home fa-2x"></i>
+                  <i className="fas fa-home "></i>
                 </a>
               </li>
               <li>
                 <a href="http://localhost:3000/budgets/new">
-                  <i className="fas fa-plus fa-2x"></i>
+                  <i className="fas fa-plus "></i>
                 </a>
               </li>
               <li>
                 <a href="http://www.bruno-dasilva.com/">
-                  <i className="fas fa-cookie-bite fa-2x"></i>
+                  <i className="fas fa-cookie-bite "></i>
                 </a>
               </li>
             </ul>
@@ -54,19 +54,19 @@ class Show extends React.Component {
             <table>
               <tr>
                 <th className="table-title">
-                  <i class="fas fa-calendar-check fa-2x"></i> D a t e
+                  <i class="fas fa-calendar-check "></i> D a t e
                 </th>
                 <th className="table-title">
-                  <i class="fas fa-clipboard-list fa-2x"></i> N a m e
+                  <i class="fas fa-clipboard-list"></i> N a m e
                 </th>
                 <th className="table-title">
-                  <i class="fas fa-user-tie fa-2x"></i> F r o m
+                  <i class="fas fa-user-tie"></i> F r o m
                 </th>
                 <th className="table-title">
-                  <i class="fas fa-tags fa-2x"></i> T a g
+                  <i class="fas fa-tags"></i> T a g
                 </th>
                 <th className="table-title">
-                  <i class="fas fa-file-invoice-dollar fa-2x"></i> A m o u n t
+                  <i class="fas fa-file-invoice-dollar"></i> A m o u n t
                 </th>
               </tr>
 
