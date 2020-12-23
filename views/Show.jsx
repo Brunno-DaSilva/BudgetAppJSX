@@ -24,6 +24,11 @@ class Show extends React.Component {
             crossorigin="anonymous"
           />
           <title>Budget - Show Page</title>
+          <link
+            rel="icon"
+            href="https://res.cloudinary.com/duprwuo4j/image/upload/v1574831158/Logo/BLOGO_k36v5y.png"
+            type="image/icon type"
+          ></link>
         </head>
         <body>
           <div className="nav-bar">
@@ -38,7 +43,7 @@ class Show extends React.Component {
                   <i className="fas fa-plus "></i>
                 </a>
               </li>
-              <li>
+              <li title="Redirecting to my Portfolio">
                 <a href="http://www.bruno-dasilva.com/">
                   <i className="fas fa-cookie-bite "></i>
                 </a>
@@ -91,6 +96,10 @@ class Show extends React.Component {
           </svg>
 
           <footer>
+            <img
+              src="https://res.cloudinary.com/duprwuo4j/image/upload/v1574831158/Logo/BLOGO_k36v5y.png"
+              alt="Bruno Logo"
+            />
             <p>
               2020 Bruno DaSilva <span> Budget App</span>
             </p>
