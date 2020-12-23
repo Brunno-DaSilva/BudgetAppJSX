@@ -6,6 +6,7 @@
 - Express
 - Node
 - JSX
+- Heroku
 
 ---
 
@@ -23,4 +24,4 @@
 
 I have made this app with previously EJS, so I converted it to JSX
 
-##### Demo:
+##### Demo: https://cage-budget-app.herokuapp.com/budgets
